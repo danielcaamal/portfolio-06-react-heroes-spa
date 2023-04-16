@@ -7,6 +7,7 @@ export const authReducer = (state: IAuthState, action: IAuthAction): IAuthState 
         case types.login:
             return {
                 ...state,
+                id: action.payload?.id,
                 name: action.payload?.name,
                 email: action.payload?.email,
                 logged: true
